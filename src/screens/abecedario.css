@@ -1,0 +1,46 @@
+.abecedario-container {
+  transform: perspective(300px) rotateX(20deg);
+}
+
+.abecedario {
+  top: 25%;
+  position: absolute;
+}
+
+.animacion_abecedario {
+  animation: deslizamiento 17s linear;
+}
+
+@media screen and (max-width: 768px) {
+  .abecedario-container {
+    transform: perspective(200px) rotateX(10deg);
+  }
+  .abecedario {
+    top: 0%;
+  }
+  .animacion_abecedario {
+    animation: deslizamientoMobile 17s linear;
+  }
+}
+
+@keyframes deslizamiento {
+  0% {
+    top: 100%;
+    opacity: 0 !important;
+  }
+
+  100% {
+    top: 25%;
+  }
+}
+
+@keyframes deslizamientoMobile {
+  0% {
+    top: 100%;
+    opacity: 0 !important;
+  }
+
+  100% {
+    top: 0%;
+  }
+}

@@ -10,10 +10,10 @@ const useFetch = (url) => {
       try {
         const response = await fetch(url);
         if (!response) {
-          throw {
+          throw Error({
             err: true,
             statusText: "Ocurrio un error",
-          };
+          });
         }
         const data = await response.json();
         setData(data);
@@ -26,6 +26,12 @@ const useFetch = (url) => {
     };
 
     getData(url);
+
+    return () => {
+      setData(null);
+      setLoading(true);
+      setError(null);
+    };
   }, [url]);
 
   return { data, loading, error };
