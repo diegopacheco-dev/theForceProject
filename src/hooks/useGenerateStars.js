@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 
 const useGenerateStars = () => {
   const canvas = useRef();
-  let ctx;
+  const ctx = useRef();
 
   useEffect(() => {
-    ctx = canvas.current.getContext("2d");
+    ctx.current = canvas.current.getContext("2d");
     let w = (canvas.current.width = window.innerWidth);
     let h = (canvas.current.height = window.innerHeight);
     let num = 150;
@@ -23,13 +23,13 @@ const useGenerateStars = () => {
     };
 
     function nevada() {
-      ctx.clearRect(0, 0, w, h);
+      ctx.current.clearRect(0, 0, w, h);
       for (var i = 0; i < num; i++) {
         var e = elementos[i];
-        ctx.beginPath();
-        ctx.fillStyle = "#ff6";
-        ctx.arc(e.x, e.y, e.tamaño, 0, 2 * Math.PI);
-        ctx.fill();
+        ctx.current.beginPath();
+        ctx.current.fillStyle = "#ff6";
+        ctx.current.arc(e.x, e.y, e.tamaño, 0, 2 * Math.PI);
+        ctx.current.fill();
       }
     }
 
