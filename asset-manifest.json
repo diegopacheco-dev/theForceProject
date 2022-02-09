@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "./static/css/main.35f31dbe.css",
+    "main.js": "./static/js/main.57f1b476.js",
+    "static/media/starwars.mp3": "./static/media/starwars.28bb4910db3681280891.mp3",
+    "index.html": "./index.html",
+    "main.35f31dbe.css.map": "./static/css/main.35f31dbe.css.map",
+    "main.57f1b476.js.map": "./static/js/main.57f1b476.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35f31dbe.css",
+    "static/js/main.57f1b476.js"
+  ]
+}
