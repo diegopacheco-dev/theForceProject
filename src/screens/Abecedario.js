@@ -47,7 +47,7 @@ const Abecedario = () => {
     setInterval(() => {
       setIsPlaying(true);
       setClaseAnimation("animacion_abecedario");
-    }, 7000);
+    }, 3000);
   };
 
   useEffect(() => {
